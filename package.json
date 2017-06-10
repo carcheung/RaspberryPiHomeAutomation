@@ -1,0 +1,9 @@
+{
+  "name": "Waffles-Home-Base",
+  "version": "0.0.1",
+  "description": "waffles socket.io website",
+  "dependencies": {
+    "express": "^4.15.3",
+    "socket.io": "^2.0.2"
+  }
+}

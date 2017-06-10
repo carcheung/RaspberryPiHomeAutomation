@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Waffles Home Base</title>
+    </head>
+    <body>
+        <button id="light_test" onclick="testGPIO()">Light Test</button>
+        <button id="light_test" onclick="GPIO_WRITE(0)">0</button>
+        <button id="light_test" onclick="GPIO_WRITE(1)">1</button>
+        <button id="light_test" onclick="GPIO_WRITE(2)">2</button>
+        <button id="light_test" onclick="GPIO_WRITE(3)">3</button>
+        <button id="light_test" onclick="GPIO_WRITE(4)">4</button>
+        <button id="light_test" onclick="GPIO_WRITE(5)">5</button>
+        <button id="light_test" onclick="GPIO_WRITE(6)">6</button>
+        <button id="light_test" onclick="GPIO_WRITE(7)">7</button>
+        <button id="light_test" onclick="GPIO_ALL_OFF()">KILL SWITCH</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="gpioControl.js"></script>
+    </body>
+</html>
