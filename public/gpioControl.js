@@ -33,3 +33,5 @@ function GPIO_ALL_OFF() {
     console.log(msg);
     return false;
 }
+
+// todo: keyboard press to manage 0123456 and kill

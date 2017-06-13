@@ -13,6 +13,9 @@ var io = require("socket.io")(http);
 var serverName = "Waffles";
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/views/index.html");
@@ -21,9 +24,9 @@ app.get("/", function(req, res) {
 io.on("connection", function(socket) {
     // todo: add timestamps and which user has connected, merge and then add which users
     // are calling which commands
-    console.log("a user connected");
+    message(serverName, "a user connected");
     socket.on('disconnect', function() {
-        console.log('user disconnected');
+        message(serverName, 'user disconnected');
     });
 });
 

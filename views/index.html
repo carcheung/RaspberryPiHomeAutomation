@@ -1,20 +1,48 @@
 <!doctype html>
 <html>
+<meta charset="UTF-8">
     <head>
         <title>Waffles Home Base</title>
+        <meta name="viewport" content="width=device-width, intiial-scale=1">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
     </head>
     <body>
-        <button id="light_test" onclick="testGPIO()">Light Test</button>
-        <button id="light_test" onclick="GPIO_WRITE(0)">0</button>
-        <button id="light_test" onclick="GPIO_WRITE(1)">1</button>
-        <button id="light_test" onclick="GPIO_WRITE(2)">2</button>
-        <button id="light_test" onclick="GPIO_WRITE(3)">3</button>
-        <button id="light_test" onclick="GPIO_WRITE(4)">4</button>
-        <button id="light_test" onclick="GPIO_WRITE(5)">5</button>
-        <button id="light_test" onclick="GPIO_WRITE(6)">6</button>
-        <button id="light_test" onclick="GPIO_WRITE(7)">7</button>
-        <button id="light_test" onclick="GPIO_ALL_OFF()">KILL SWITCH</button>
+        <div class="container-fluid">
+        <h1>Bootstrap test</h1>
+        <p>some bootstrap formatted font</p>
+            <div class="row">
+                <div class="col-sm-6" >
+                    <button class="col-sm-4" onclick="GPIO_WRITE(0)">0</button>
+                    <button class="col-sm-4" onclick="GPIO_WRITE(1)">1</button>
+                    <button class="col-sm-4" onclick="GPIO_WRITE(2)">2</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="col-sm-4" onclick="GPIO_WRITE(3)">3</button>
+                    <button class="col-sm-4" onclick="GPIO_WRITE(4)">4</button>
+                    <button class="col-sm-4" onclick="GPIO_WRITE(5)">5</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <button class="col-sm-4" onclick="GPIO_WRITE(6)">6</button>
+                    <button class="col-sm-4" onclick="GPIO_WRITE(7)">7</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <br>
+                    <br>
+                    <button class="col-sm-12" onclick="GPIO_ALL_OFF()">KILL SWITCH</button>
+                    <button  onclick="testGPIO()">Light Test</button>
+                </div>
+            </div>
+        </div>
         <script src="/socket.io/socket.io.js"></script>
         <script src="gpioControl.js"></script>
+        </div>
     </body>
 </html>
